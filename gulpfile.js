@@ -48,13 +48,16 @@ gulp.task('watcher',function(){
 **/
 require('marko/hot-reload').enable();
 gulp.task('marko',function(){
+
     var reload = gulp.src(src.marko)
+        .pipe($.cached('marko-reload'))
         .pipe(through.obj(function (file, enc, cb) {
             require('marko/hot-reload').handleFileModified(file.path);
             cb(null, file);
         }));
 
     var build = gulp.src(src.marko)
+        .pipe($.cached('marko'))
         .pipe($.marko({
             renderParams: {
                 title: 'Hello Marko'

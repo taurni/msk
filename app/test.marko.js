@@ -7,7 +7,7 @@ function create(__helpers) {
   return function render(data, out) {
     out.w('<!doctype html> <html lang="en-US"><head><meta charset="UTF-8"><title>Browsersync, Gulp + Swig templates</title><link rel="stylesheet" href="css/main.css"></head><body><h1>' +
       escapeXml(data.title) +
-      '!</h1> ok \u00e4hh?see juu t\u00f6\u00f6tab 1122</body></html>');
+      '!</h1> ok \u00e4hh?see juu t\u00f6\u00f6tab tere 3</body></html>');
   };
 }
 (module.exports = require("marko").c(__filename)).c(create);

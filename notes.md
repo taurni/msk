@@ -1,15 +1,16 @@
 TODO:
-* compile only changed MARKO files!
-* Marko root võiks olla 'app' ?
-* file.marko.html -> file.html ?
+* [x] compile only changed MARKO files! (gulp-cached)
+* [ ] HTML whitespace
+* [ ] file.marko.html -> file.html ? (gulp-rename)
 * marko.js failid eraldi kausta või genereerita üldse!
-* HTML whitespace
+* Marko root võiks olla 'app' ?
 
 ## Layout
 Paigutus. Saaks eristada **page layout** ja **component layout** griidi puhul määrab mõlema layouti
 
 ## Template
 defineeritud veebisisu (data) tükid
+
 
 -------------------------------------------
 # Notes
