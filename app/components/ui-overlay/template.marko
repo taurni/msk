@@ -1,0 +1,16 @@
+<div class="overlay">
+    <!-- Header -->
+    <div class="overlay-header ${data.header['class']}" if="data.header">
+        <invoke function="data.header.renderBody(out)"/>
+    </div>
+
+    <!-- Body -->
+    <div class="overlay-body ${data.body['class']}" if="data.body">
+        <invoke function="data.body.renderBody(out)"/>
+    </div>
+
+    <!-- Footer -->
+    <div class="overlay-footer ${data.footer['class']}" if="data.footer">
+        <invoke function="data.footer.renderBody(out)"/>
+    </div>
+</div>

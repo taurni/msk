@@ -7,7 +7,8 @@ function create(__helpers) {
       __renderer = __helpers.r,
       ______node_modules_marko_layout_use_tag_js = __renderer(require("marko-layout/use-tag")),
       __tag = __helpers.t,
-      ______node_modules_marko_layout_put_tag_js = __renderer(require("marko-layout/put-tag"));
+      ______node_modules_marko_layout_put_tag_js = __renderer(require("marko-layout/put-tag")),
+      ___components_ui_tabs_renderer_js = __renderer(require("../components/ui-tabs/renderer"));
 
   return function render(data, out) {
     __tag(out,
@@ -22,7 +23,41 @@ function create(__helpers) {
               "layout": __layoutHelper
             },
             function(out) {
-              out.w('<h1>Hello Marko World</h1><p>Siia l\u00e4heb mingi sisu</p> see on parem');
+              __tag(out,
+                ___components_ui_tabs_renderer_js,
+                {
+                  "orientation": "horizontal"
+                },
+                function(out, __nestedTagInput0) {
+                  __tag(out,
+                    null,
+                    {
+                      "title": "Home"
+                    },
+                    function(out) {
+                      out.w('Content for Home');
+                    },
+                    { targetProperty: "tabs", parent: __nestedTagInput0, isRepeated: 1 });
+                  __tag(out,
+                    null,
+                    {
+                      "title": "Profile"
+                    },
+                    function(out) {
+                      out.w('Content for Profile');
+                    },
+                    { targetProperty: "tabs", parent: __nestedTagInput0, isRepeated: 1 });
+                  __tag(out,
+                    null,
+                    {
+                      "title": "Messages"
+                    },
+                    function(out) {
+                      out.w('Content for Messages');
+                    },
+                    { targetProperty: "tabs", parent: __nestedTagInput0, isRepeated: 1 });
+                },
+                { hasNestedTags: 1 });
             });
         }
       });

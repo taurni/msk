@@ -44,7 +44,6 @@ gulp.task('watcher',function(){
 /** Marko hotreloader for auto combileing
  *  https://gitter.im/marko-js/marko/archives/2015/10/22
  *  ---------------------------------------------------- *
- *  TODO: compile only changed files!
 **/
 require('marko/hot-reload').enable();
 gulp.task('marko',function(){

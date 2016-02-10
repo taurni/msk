@@ -1,6 +1,19 @@
 <layout-use template="../layouts/main.marko">
     <layout-put into="body">
-        <h1>Hello Marko World</h1>
-        <p>Siia läheb mingi sisu</p> see on parem
+
+
+
+        <ui-tabs orientation="horizontal">
+            <ui-tabs.tab title="Home">
+                Content for Home
+            </ui-tabs.tab>
+            <ui-tabs.tab title="Profile">
+                Content for Profile
+            </ui-tabs.tab>
+            <ui-tabs.tab title="Messages">
+                Content for Messages
+            </ui-tabs.tab>
+        </ui-tabs>
+
     </layout-put>
 </layout-use>
