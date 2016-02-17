@@ -1,0 +1,26 @@
+<compiler-options whitespace="preserve"/>
+<layout-use template="../layouts/main.marko">
+    <layout-put into="body">
+
+        <grid class="test-Clas"
+              equalheight="true"
+              reverse=['xs','sm']
+              align={sm:'top',md:'top',lg:['start','bottom']}
+              no-gutter=['all']>
+
+            <grid.col class="minu custom Class" width={xs:12,md:6} >
+                <h1>Title</h1>
+                <p>paragraph...</p>
+            </grid.col >
+
+            <grid.col width={xs:12,md:6} offset={md:3} order={lg:'first'}>
+                 Column 2
+            </grid.col>
+
+            <grid.col width={xs:12,md:6} align={lg:'bottom'} data-target="#id">
+                 Column 3
+            </grid.col>
+        </grid>
+
+    </layout-put>
+</layout-use>

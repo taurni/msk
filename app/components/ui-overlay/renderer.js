@@ -1,7 +1,5 @@
 var template = require('./template.marko');
 
-console.log("TEST",template)
-
 exports.renderer = function(input, out) {
     var header = input.header;
     var body = input.body;

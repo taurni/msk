@@ -1,0 +1,6 @@
+<div class="grid ${data.class}" attrs="data['*']"  >
+    ${data}
+    <div class="${col.class}" for="col in data.cols" attrs="col['*']">
+        <invoke function="col.renderBody(out)"/>
+    </div>
+</div>

@@ -14,7 +14,8 @@ var src = {
     //scss: 'app/scss/*.scss',
     //css:  'app/css',
     html:   'app/**/*.html',
-    marko:  'app/**/*.marko'
+    marko:  'app/**/*.marko',
+    markoWatch: ['app/**/*.marko','app/**/renderer.js','app/**/marko-tag.json']
 };
 var dir ={
     app:            "./app",
@@ -32,11 +33,11 @@ gulp.task('serve', ['marko'], function(){
     /* kui vaja html reloadi siis peab välistam marko.html reloadi
     *  gulp.watch(src.html).on('change', RELOAD);
     */
-    gulp.watch(src.marko, ['marko']);
+    gulp.watch(src.markoWatch, ['marko']);
 });
 
-gulp.task('watcher',function(){
-    gulp.watch(src.marko, ['marko']);
+gulp.task('watcher',['marko'],function(){
+    gulp.watch(src.markoWatch, ['marko']);
 });
 
 
@@ -46,23 +47,23 @@ gulp.task('watcher',function(){
  *  ---------------------------------------------------- *
 **/
 require('marko/hot-reload').enable();
+require('marko/node-require').install();
 gulp.task('marko',function(){
 
     var reload = gulp.src(src.marko)
-        .pipe($.cached('marko-reload'))
+        //.pipe($.cached('marko-reload'))
         .pipe(through.obj(function (file, enc, cb) {
             require('marko/hot-reload').handleFileModified(file.path);
             cb(null, file);
         }));
 
     var build = gulp.src(src.marko)
-        .pipe($.cached('marko'))
+        //.pipe($.cached('marko'))
         .pipe($.marko({
             renderParams: {
                 title: 'Hello Marko'
             }
         }))
-        .pipe($.debug({title: 'MARKO-out:'}))
         .pipe(gulp.dest(dir.marko));
 
     return merge(reload,build).on('end', RELOAD);

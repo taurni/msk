@@ -1,6 +1,7 @@
 {
   "@header <header>": {
-    "@class": "string"
+    "@class": "string",
+    "@title": "string"
   },
   "@body <body>": {
     "@class": "string"

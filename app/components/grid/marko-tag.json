@@ -1,0 +1,16 @@
+{
+  "@equalheight": "boolean",
+  "@reverse":"array",
+  "@align":"object",
+  "@no-gutter":"array",
+  "@class": "string",
+  "@*": "string",
+  "@cols <col>[]": {
+    "@class": "string",
+    "@width": "object",
+    "@offset": "object",
+    "@order": "object",
+    "@align": "object",
+    "@*": "string"
+  }
+}

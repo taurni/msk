@@ -1,11 +1,11 @@
 <div class="overlay">
     <!-- Header -->
-    <div class="overlay-header ${data.header['class']}" if="data.header">
+    <div class="overlay-header ${data.header['class']}" title="${data.header['title']}" if="data.header">
         <invoke function="data.header.renderBody(out)"/>
     </div>
 
     <!-- Body -->
-    <div class="overlay-body ${data.body['class']}" if="data.body">
+    <div class="overlay-body ${data.body.class}" if="data.body">
         <invoke function="data.body.renderBody(out)"/>
     </div>
 

@@ -1,10 +1,9 @@
+<compiler-options whitespace="preserve"/>
 <layout-use template="../layouts/main.marko">
     <layout-put into="body">
 
-
-
         <ui-tabs orientation="horizontal">
-            <ui-tabs.tab title="Home">
+            <ui-tabs.tab title="Home" id="myID">
                 Content for Home
             </ui-tabs.tab>
             <ui-tabs.tab title="Profile">
@@ -14,6 +13,20 @@
                 Content for Messages
             </ui-tabs.tab>
         </ui-tabs>
+
+        <ui-overlay>
+            <ui-overlay.header class="my-header">
+                Header content
+            </ui-overlay.header>
+
+            <ui-overlay.body class="my-body">
+                Body content
+            </ui-overlay.body>
+
+            <ui-overlay.footer class="my-footer">
+                Footer content
+            </ui-overlay.footer>
+        </ui-overlay>
 
     </layout-put>
 </layout-use>

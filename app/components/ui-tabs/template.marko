@@ -1,7 +1,8 @@
-<div class="tabs">
+<div class="tabs" c-whitespace="preserve">
     <ul class="nav nav-tabs">
         <li class="tab" for="tab in data.tabs">
-            <a href="#${tab.title}">
+            <a href="#${tab.id}">
+                ${data.tabs[0].id}
                 ${tab.title}
             </a>
         </li>
