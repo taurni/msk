@@ -1,10 +1,11 @@
 TODO:
-* [x] compile only changed MARKO files! (gulp-cached)
 * [ ] HTML whitespace
 * [ ] file.marko.html -> file.html ? (gulp-rename)
 * marko.js failid eraldi kausta või genereerita üldse!
 * Marko root võiks olla 'app' ?
-* WATCH: Kui nt layout marko fail muutub, siis peaks reloadi tegema ka failid mis seda kasutavad
+* [x] compile only changed MARKO files! (gulp-cached)
+* [x] WATCH: Kui nt layout marko fail muutub, siis peaks reloadi tegema ka failid mis seda kasutavad - Renderdatakse
+kõik marko failild
 
 ## Layout
 Paigutus. Saaks eristada **page layout** ja **component layout** griidi puhul määrab mõlema layouti

@@ -7,7 +7,7 @@ function create(__helpers) {
       __tag = __helpers.t;
 
   return function render(data, out) {
-    out.w('\n<!doctype html>\n<html lang="en-US">\n    <head>\n        <meta charset="UTF-8">\n        <title>Browsersync, Gulp + Marko templates</title>\n        <link rel="stylesheet" href="css/main.css">\n    </head>\n    <body>\n        ');
+    out.w('\n<!doctype html>\n<html lang="en-US">\n    <head>\n        <meta charset="UTF-8">\n        <title>Browsersync, Gulp + Marko templates</title>\n        <link rel="stylesheet" href="css/main.css">\n    </head>\n    <body>\n        <h1>Muudan Layouti</h1>\n        ');
     __tag(out,
       ______node_modules_marko_layout_placeholder_tag_js,
       {

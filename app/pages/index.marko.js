@@ -26,7 +26,7 @@ function create(__helpers) {
               "layout": __layoutHelper
             },
             function(out) {
-              out.w('\n\n        ');
+              out.w('\nmuudan Template\'i\n        ');
               __tag(out,
                 ___components_ui_tabs_renderer_js,
                 {

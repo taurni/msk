@@ -51,14 +51,16 @@ require('marko/node-require').install();
 gulp.task('marko',function(){
 
     var reload = gulp.src(src.marko)
-        //.pipe($.cached('marko-reload'))
+        .pipe($.cached('marko-reload'))
         .pipe(through.obj(function (file, enc, cb) {
             require('marko/hot-reload').handleFileModified(file.path);
             cb(null, file);
         }));
 
+    /* Render all templates, because some templates may contain
+    * (inclode or layout) templates, that has changed  */
     var build = gulp.src(src.marko)
-        //.pipe($.cached('marko'))
+        //.pipe($.cached('marko')) // render all templates
         .pipe($.marko({
             renderParams: {
                 title: 'Hello Marko'
