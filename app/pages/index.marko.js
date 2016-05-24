@@ -5,22 +5,22 @@ function create(__helpers) {
       __loadTemplate = __helpers.l,
       ___layouts_main_marko = __loadTemplate(require.resolve("../layouts/main.marko"), require),
       __renderer = __helpers.r,
-      ______node_modules_marko_layout_use_tag_js = __renderer(require("marko-layout/use-tag")),
+      ______node_modules_gulp_marko_node_modules_marko_layout_use_tag_js = __renderer(require("gulp-marko/node_modules/marko-layout/use-tag")),
       __tag = __helpers.t,
-      ______node_modules_marko_layout_put_tag_js = __renderer(require("marko-layout/put-tag")),
+      ______node_modules_gulp_marko_node_modules_marko_layout_put_tag_js = __renderer(require("gulp-marko/node_modules/marko-layout/put-tag")),
       ___components_ui_tabs_renderer_js = __renderer(require("../components/ui-tabs/renderer")),
       ___components_ui_overlay_renderer_js = __renderer(require("../components/ui-overlay/renderer"));
 
   return function render(data, out) {
     out.w('\n');
     __tag(out,
-      ______node_modules_marko_layout_use_tag_js,
+      ______node_modules_gulp_marko_node_modules_marko_layout_use_tag_js,
       {
         "template": ___layouts_main_marko,
         "getContent": function(__layoutHelper) {
           out.w('\n    ');
           __tag(out,
-            ______node_modules_marko_layout_put_tag_js,
+            ______node_modules_gulp_marko_node_modules_marko_layout_put_tag_js,
             {
               "into": "body",
               "layout": __layoutHelper
